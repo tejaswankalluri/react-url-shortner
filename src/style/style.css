@@ -69,6 +69,7 @@
   font-size: 25px;
   border-radius: 5px;
   height: 50px;
+  min-width: 200px;
   width: 400px;
   padding: 10px;
 }
@@ -84,7 +85,7 @@
   color: white;
   font-size: 20px;
   font-weight: 100;
-  margin: 20px 0px;
+  margin: 10px 0px;
   padding: 10px 10px;
   border-radius: 5px;
 }
@@ -96,6 +97,7 @@
 .Dynamic #short-url {
   font-size: 20px;
   background-color: #fff;
+  margin: 10px 0px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -103,5 +105,29 @@
   height: -moz-max-content;
   height: max-content;
   padding: 20px;
+}
+
+.Dynamic #short-url:empty {
+  display: none;
+}
+
+.Dynamic .copied {
+  margin: 10px 0px;
+  color: #fff;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 760px) {
+  html {
+    font-size: 68%;
+  }
+  .nav .nav-links {
+    display: none;
+  }
+  .Dynamic #input-url {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
 }
 /*# sourceMappingURL=style.css.map */

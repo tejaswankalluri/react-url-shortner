@@ -50,31 +50,57 @@
         font-size: 25px;
         border-radius: 5px;
         height: 50px;
+        min-width: 200px;
         width: 400px;
         padding: 10px;
+        &:focus{
+            border:#00a8ff 1px solid;
+            outline:none;
+        }
     }
-    #input-url:focus{
-        border:#00a8ff 1px solid;
-        outline:none;
-    }
+
     #submit-button{
         background-color: #44bd32;
         border: none;
         color: white;
         font-size: 20px;
         font-weight: 100;
-        margin: 20px 0px;
+        margin: 10px 0px;
         padding: 10px 10px;
         border-radius: 5px;
-    }
-    #submit-button:disabled{
-        background-color: #7f8fa6;
+        &:disabled{
+            background-color: #7f8fa6;
+        }
     }
     #short-url{
         font-size: 20px;
         background-color: #fff;
+        margin: 10px 0px;
         width: max-content;
         height: max-content;
         padding: 20px;
+        &:empty{
+            display: none;
+        }
+    }
+    .copied{
+        margin: 10px 0px;
+        color: #fff;
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 760px){
+    html{
+        font-size: 68%;
+    }
+    .nav{
+        .nav-links{
+            display: none;
+        }
+    }
+    .Dynamic{
+        #input-url{
+            width: min-content;
+        }
     }
 }

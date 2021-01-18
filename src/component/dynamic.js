@@ -68,6 +68,7 @@ function Dynamic() {
         type="text"
         id="input-url"
         placeholder="Enter the url.."
+        autoComplete="off"
         onKeyDown={handleKeyDown}
         onChange={(e) => {
           validURL(e.target.value);
@@ -84,17 +85,17 @@ function Dynamic() {
       <p
         id="short-url"
         onClick={() => {
-          if (shorturl !== '') {
+          if (shorturl !== undefined) {
             navigator.clipboard.writeText(shorturl);
           }
-          setCopied(`copied`);
+          setCopied(`Copied`);
           setInterval(() => {
             setCopied(``);
-          }, 5000);
+          }, 3000);
         }}>
-        {shorturl} <i className="far fa-clipboard"></i>
+        {shorturl}
       </p>
-      <p>{copied}</p>
+      <p className="copied">{copied}</p>
     </div>
   );
 }
