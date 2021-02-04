@@ -7,7 +7,7 @@ function Dynamic() {
   const [disable, setDisable] = useState('disabled');
   const [shorturl, setShorturl] = useState();
   const [copied, setCopied] = useState();
-
+  const [paragraph, setParagraph] = useState(false)
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       urlsubmit();
@@ -57,6 +57,7 @@ function Dynamic() {
       .then(function (response) {
         const { data } = response;
         setShorturl(data.result_url);
+        setParagraph(true); //addding the paragraph component
       })
       .catch(function (error) {
         console.error(error);
@@ -82,6 +83,7 @@ function Dynamic() {
         onClick={() => urlsubmit()}>
         Generate
       </button>
+      {paragraph === true &&
       <p
         id="short-url"
         onClick={() => {
@@ -93,8 +95,8 @@ function Dynamic() {
             setCopied(``);
           }, 3000);
         }}>
-        {shorturl}
-      </p>
+        {shorturl} <i className="far fa-clipboard"></i>
+      </p>}
       <p className="copied">{copied}</p>
     </div>
   );
