@@ -95,7 +95,7 @@ function Dynamic() {
             setCopied(``);
           }, 3000);
         }}>
-        {shorturl} <i className="far fa-clipboard"></i>
+        {shorturl} <i className="far fa-clipboard" id="fa-clipboard"></i>
       </p>}
       <p className="copied">{copied}</p>
     </div>

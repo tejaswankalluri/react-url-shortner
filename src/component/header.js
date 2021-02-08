@@ -6,17 +6,16 @@ export default function Header() {
     <div className="nav">
       <div className="nav-title">React Url Shortner</div>
 
-      <div className="nav-links">
+      {/* <div className="nav-links">
         <ul>
           <li>
-            {/* eslint-disable */}
             <a href="/">home</a>
           </li>
           <li>
             <a href="">about</a>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }
